@@ -31,7 +31,7 @@ export class UsersController {
 
   @Put(':id')
   update(@Param() params, @Body() user: User) {
-    return this.service.saveUser(params.id, user);
+    return this.service.updateUser(params.id, user);
   }
 
   @Delete(':id')
