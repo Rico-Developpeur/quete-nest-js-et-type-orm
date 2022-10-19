@@ -25,6 +25,10 @@ export class UsersService {
     return this.usersRepository.save(user);
   }
 
+  updateUser(id: number, user: User) {
+    return this.usersRepository.update(id, user);
+  }
+
   deleteUser(user: User): void {
     this.usersRepository.delete(user);
   }

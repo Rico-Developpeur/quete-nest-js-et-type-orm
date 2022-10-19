@@ -29,9 +29,9 @@ export class UsersController {
     return this.service.saveUser(user);
   }
 
-  @Put()
-  update(@Body() user: User) {
-    return this.service.saveUser(user);
+  @Put(':id')
+  update(@Param() params, @Body() user: User) {
+    return this.service.saveUser(params.id, user);
   }
 
   @Delete(':id')
